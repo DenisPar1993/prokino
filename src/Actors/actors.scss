@@ -1,0 +1,28 @@
+.actors-wrapper{
+  display: flex;
+
+  padding-top: 70px;
+  gap: 80px;
+
+  .actors-name{
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 130%;
+  }
+  .actors-role{
+      padding-top: 6px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 130%
+  }
+  .actors-image{
+    img{
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+    
+  }
+  
+
+}

@@ -1,0 +1,21 @@
+.top-inner{ 
+    padding-top: 150px;
+    background-color: #F1E8E8;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding-left: 70px;
+}
+.top-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+}
+.top-filt{
+    display: flex;
+    background-color: #F1E8E8;
+}
+.error{
+    display: none;
+   
+}

@@ -1,0 +1,28 @@
+.popular-inner{
+    padding-top: 150px;
+    background-color: #F1E8E8;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding-left: 70px;
+}
+.popular-filt{
+    display: flex;
+    background-color: #F1E8E8;
+}
+.popular-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+}
+.but{
+    margin: 50px auto;
+    background-color: red;
+    border: none;
+    width: 171px;
+    height: 50px;
+    font-size: 20px;
+}
+.error{
+    display: none;
+}

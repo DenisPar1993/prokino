@@ -1,0 +1,51 @@
+.wrap-film{
+    display: none;
+}
+
+
+.discribe-down__text{
+    max-width: 755px;
+    margin-bottom: 30px;
+    font-size: 22px;
+    // transition: all 2s ease-in-out .5s;
+}
+
+.rating__title{
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.pragress {
+    display: flex;
+    gap: 30px;
+    
+    .progress__wrapper{
+        width: 414px;
+        background-color:#C4C4C4;
+        opacity: 0.4;
+        height: 24px;
+        border-radius: 20px;
+        margin: auto 0;
+    
+    }
+    .progress__inner{
+     background-color: #9DC796;
+     opacity: 1;
+     width: 80%;
+     height: 24px;
+     border-radius: 20px;
+    
+    }
+    .rate-value{
+        font-size: 42px;
+        color: #3CCB4A;
+        font-weight: 700;
+    }
+    
+    
+    
+  }
+//   .active{
+//       display: block;
+//   }

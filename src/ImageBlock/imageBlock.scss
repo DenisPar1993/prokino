@@ -1,0 +1,23 @@
+.image-block{
+    position: relative;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+    transition: all 2s .5;
+    .slick-arrow{
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        color: white;
+    }
+    .slick-prev {
+        left: -48px;
+    }
+    .slick-next {
+        right: -50px;
+    }
+}
+
+.img-block{
+    object-fit: contain;
+}
