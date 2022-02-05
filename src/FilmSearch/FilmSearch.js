@@ -12,14 +12,13 @@ function EmptySeach(){
         <h3>По вашему запросу ничего не найдено</h3>
     )
 }
-function FilmSearch({item, onFilmPage}) {
+function FilmSearch() {
     const {word}=useParams();
          const dispatch=useDispatch()
          useEffect(()=>{
                    dispatch(fetchSearch(word))
                },[word])
     const {searchFilm,loadingSearch,error}=useSelector(state=>state.search)
-   console.log( window.location.href);
    const load=loadingSearch?<Spinner />:null;
    const errorMess= error?<ErrorMessage/>:null;
    const view=!(loadingSearch||error)?<View search={searchFilm}/>:null;

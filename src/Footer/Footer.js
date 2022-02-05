@@ -3,7 +3,7 @@ import './Footer.scss'
 
 function Footer() {
   return <div className='footer'>
-© 2022 Film.ru — всё о кино
+© 2022 PROKINO — всё о кино
   </div>;
 }
 

@@ -5,7 +5,8 @@ const initialState={
     searchFilm:[],
     resps:[],
     loadingMain:false,
-    error:false
+    error:false,
+    activeResp:false
 }
 
 export const fetchResp = createAsyncThunk(
@@ -27,6 +28,11 @@ export const fetchResp = createAsyncThunk(
 const mainSlice = createSlice({
     name:"main",
     initialState,
+    reducers:{
+       addActive(state){
+          state.activeResp=!state.activeResp
+       }
+    },
     extraReducers:(builder)=>{
         builder
                 .addCase(fetchResp.fulfilled,(state,action)=>{
@@ -49,5 +55,5 @@ export default reducer;
 export const {
     topFilms,
     popularFilms,
-    awaitFilms
+    awaitFilms,
 }=actions

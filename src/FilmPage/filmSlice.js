@@ -9,7 +9,6 @@ const initialState={
 export const fetchSingleFilm=createAsyncThunk(
     'singleFilm/fetchSingleFilm',
     async (id)=>{
-        console.log(id);
         const {responseId, responseBoxOffice, responseStaff,responseVideos,responseImage,resposeSearch,responseTop}=useRespondFilm();
          const arrFilm= await Promise.all([
            responseId(id),
@@ -18,7 +17,6 @@ export const fetchSingleFilm=createAsyncThunk(
            responseVideos(id),
            responseImage(id)
          ]).then(res=>res)
-         console.log(arrFilm);
          return arrFilm;
     }
 )

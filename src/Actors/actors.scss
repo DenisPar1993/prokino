@@ -26,3 +26,19 @@
   
 
 }
+@media(max-width:550px){
+  .actors-wrapper {
+    gap: 0px;
+}
+.actors-wrapper .actors-name {
+  font-size: 20px;
+}
+.actors-wrapper .actors-role {
+  font-size: 14px;
+}
+}
+@media(max-width:400px){
+.actors-wrapper .actors-name {
+  font-size: 17px;
+}
+}

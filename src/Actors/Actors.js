@@ -1,15 +1,15 @@
 import React from 'react'
 import './actors.scss'
+import { v4 as uuidv4 } from 'uuid';
 
 function Actors({ actors }) {
-    console.log(actors);
     return (
 
 
         <div className='actors'>
             {actors.map(item => {
                 return (
-                    <div className='actors-wrapper'>
+                    <div key={uuidv4()} className='actors-wrapper'>
                         <div className="actors-image">
                             <img src={item.image} alt="" />
                         </div>

@@ -19,5 +19,45 @@
 }
 
 .img-block{
+    width: 600px;
+    height: 600px;
     object-fit: contain;
+}
+
+@media(max-width:663px){
+    .img-block {
+        width: 497px;
+        height: 519px;
+        object-fit: contain;
+    }
+    .image-block {
+        max-width: 498px;
+        
+    }
+
+}
+@media(max-width:550px){
+    .img-block {
+        width: 400px;
+        height: 500px;
+        object-fit: contain;
+    }
+    .image-block {
+        max-width: 400px;
+        
+    }
+
+}
+
+@media(max-width:468px){
+    .img-block {
+        width: 300px;
+        height: 250px;
+        object-fit: contain;
+    }
+    .image-block {
+        max-width: 300px;
+        
+    }
+
 }

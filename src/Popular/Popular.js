@@ -12,18 +12,15 @@ import { v4 as uuidv4 } from 'uuid';
  
 
 function Popular() {
-const {popularOffset,popularPagination,error,currentArr,loadingPopular}=useSelector(state=>state.popular)
+const {error,loadingPopular}=useSelector(state=>state.popular)
 const load= loadingPopular?<Spinner />:null;
-
-    const view= !loadingPopular||!error?<View />:null;
-    
+    const view= !loadingPopular||!error?<View />:null; 
    const errMess= error?<ErrorMessage />:null;
    
   return (
       <>
       {errMess}
      {load} 
-     {/* <View/> */}
      {view}
       </>
     
@@ -64,7 +61,6 @@ const View =()=>{
         }
     }
     useEffect(()=>{
-        console.log('текущий массив',currentArr);
           if( popularOffset==1|| currentArr.length){
             dispatch(fetchPopularOffset(popularOffset))
           }
@@ -75,7 +71,6 @@ const View =()=>{
         setCountry('Все');
 
         dispatch(activeFilterPopular(['Все','Все']))
-        console.log(popularOffset);
         window.addEventListener("scroll", scrollTest);
         return () => window.removeEventListener("scroll",scrollTest);
    

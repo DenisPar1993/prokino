@@ -3,6 +3,11 @@
 .film-page{
     background-color: $container-color;
     min-height: 100vh;
+    padding-bottom: 20px;
+}
+.big-image{
+    width: 349px;
+    height: 485px;
 }
 .discribe{
     padding-top: 140px;
@@ -105,3 +110,103 @@
   .error{
    display: none;
   }
+
+  @media(max-width:1018px){
+    .discribe {
+        padding-top: 210px;
+    } 
+    .discribee-up__title {
+        padding-left: 60px;
+        font-size: 33px;
+    } 
+    .discribe-up {
+        gap: 59px;
+    }
+}
+@media(max-width:1018px){
+    .discribe{
+        margin: 0 30px;
+    }
+}
+@media(max-width:788px){
+    .discribe {
+        padding-top: 150px;
+    }
+    .discribe-up {
+        flex-direction: column;
+        align-items: center;
+    }
+    .discribee-up__title {
+        padding: 0;
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+    .discribe__item {
+        font-size: 14px;
+    }
+}
+@media(max-width:605px){
+    .discribe__menu-link{
+     font-size: 20px;
+    }
+    .discribe__menu {
+        gap: 20px;
+    }
+}
+@media(max-width:550px){
+    .discribe__menu-link{
+     font-size: 18px;
+    }
+    .discribe__menu {
+        gap: 18px;
+    }
+}
+@media(max-width:493px){
+    .discribe__menu-link{
+     font-size: 16px;
+    }
+    .discribe__menu {
+        gap: 16px;
+    }
+    .discribe-down__text {
+        font-size: 17px;
+    }
+}
+@media(max-width:446px){
+    .discribe {
+        margin: 0px 10px;
+    }
+    .discribe__menu-link{
+     font-size: 14px;
+    }
+    .discribe__menu {
+        gap: 14px;
+    }
+    .image-block {
+        max-width: 360px;
+    }
+    .img-block {
+        width: 260px;
+        height: 250px;
+    }
+    .discribe-down__text {
+        font-size: 14px;
+    }
+}
+@media(max-width:380px){
+    .discribe__menu-link{
+        font-size: 12px;
+       } 
+       .discribe__menu {
+        gap: 12px;
+    }
+    .big-image{
+        width: 300px;
+        height: 485px;
+    }
+    .pragress .rate-value {
+        font-size: 30px;
+        color: #3CCB4A;
+        font-weight: 700;
+    }
+}

@@ -2,7 +2,6 @@
 
 const useRespondFilm=()=>{
 const _apiBase ='https://kinopoiskapiunofficial.tech/api/v2.2/films';
-// const url= '/top?type=TOP_250_BEST_FILMS&page=1'
 const _apiSet={
     method: 'GET',
     headers: {
@@ -13,11 +12,6 @@ const _apiSet={
 const date=new Date;
 const arrMouths=['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
 const mouth= date.getMonth()
-// function rateCut(name){
-//  return name.slice(3,+name.length)
-// }
-
-
 const responseTop= async(url)=>{
     const req= await fetch(`${_apiBase}${url}`,_apiSet)
      const resw = await req.json();
@@ -43,19 +37,15 @@ const responseVideos = async(id)=>{
             lem= item.url
         }
     })
-    
     if(lem===''){
         return
     }
-    
     let zet= lem.slice(lem.length-11,lem.length)
-    console.log(zet);
     return zet;
 }
 const responseBoxOffice = async(id)=>{
     const resp= await fetch (`${_apiBase}/${id}/box_office`,_apiSet)
     const respJson = await resp.json();
-    // console.log('Boxoffice', respJson);
     if(respJson.items[0]){
         return respJson.items[0].amount+respJson.items[0].symbol;
     }
@@ -73,14 +63,8 @@ const responsePremier =async()=>{
     return respJson.items;
     
 }
-// `https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=1&genres=32&order=RATING&type=TV_SHOW&ratingFrom=7&ratingTo=10&yearFrom=2000&yearTo=2021&page={offset}`
-//`https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=1&order=RATING&type=ALL&ratingFrom=8&ratingTo=10&yearFrom=2000&yearTo=2021&page=${offset}`
-//`https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_AWAIT_FILMS&page={offset}`
 const responseSerials =async(offset=1)=>{
     const resp= await fetch (`https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=1&order=RATING&type=ALL&ratingFrom=8&ratingTo=10&yearFrom=2000&yearTo=2021&page=${offset}`,_apiSet);
-    
-    // const resp =await responseTop(`/top?type=TOP_AWAIT_FILMS&page=${offset}`)
-    // console.log(resp);
     const respJson = await resp.json();
     return respJson.items;
 }
@@ -127,7 +111,6 @@ const TransformFilm = (char)=>{
 }
 
 const TransformStaff = (char)=>{
-    console.log(char);
     let boxOffice=[];
     char.forEach(item=>{
         if  (item.professionKey=='DIRECTOR'){
@@ -168,12 +151,3 @@ const transformTop=(char)=>{
 
 export default useRespondFilm
 
-
-
-
-    const a= new Date;
-    console.log(a.getMonth());
-
-// let a="http://www.youtube.com/v/L0B0g2kIM-I"
-
-// console.log(a.slice(a.length-11,a.length));

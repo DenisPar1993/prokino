@@ -4,8 +4,25 @@
     min-height: 100vh;
     flex-wrap: wrap;
     gap: 20px;
-    padding-top: 250px;
+    padding-top: 170px;
     background-color: #F1E8E8;
     margin: 0 auto;
     padding-left: 70px;
+    padding-bottom: 20px;
+}
+
+@media(max-width:1118px){
+    .film-search{
+        padding-top: 200px;
+        justify-content: center;
+        padding-left: 0;
+    }
+}
+@media(max-width:788px){
+    
+   
+    .film-search{
+        padding-top: 170px;
+        justify-content: center;
+    }
 }

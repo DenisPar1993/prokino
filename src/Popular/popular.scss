@@ -1,12 +1,14 @@
 .popular-inner{
-    padding-top: 150px;
+    padding-top: 90px;
     background-color: #F1E8E8;
     margin: 0 auto;
     min-height: 100vh;
     padding-left: 70px;
+    padding-bottom: 20px;
 }
 .popular-filt{
     display: flex;
+    justify-content: center;
     background-color: #F1E8E8;
 }
 .popular-wrap{
@@ -25,4 +27,17 @@
 }
 .error{
     display: none;
+}
+
+
+@media(max-width:1118px){
+    
+    .popular-wrap {
+        justify-content: center;
+    }
+}
+@media(max-width:788px){
+    .popular-inner {
+        padding-left: 15px;
+    }
 }

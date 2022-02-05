@@ -4,7 +4,7 @@ import SideFilter from '../SideFilter/SideFilter';
 import { useState,useEffect } from 'react';
 import Spinner from '../Spinner/Spinner';
 import { useSelector,useDispatch } from 'react-redux';
-import { filtPremiers } from './premierSlice';
+import { filtPremiers,fetchPremier } from './premierSlice';
 import './Premiers.scss';
 import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import { v4 as uuidv4 } from 'uuid';
@@ -13,7 +13,7 @@ function Premiers({item,filt}) {
     const {loadingPremiers,error}=useSelector(state=>state.premier)
     const load = loadingPremiers?<Spinner />:null;
     const ErrorMess=error?<ErrorMessage/>:null;
-    const view = !(loadingPremiers||error)?<View />:null;
+    const view = !loadingPremiers||!error?<View />:null;
     
     return (
         <>
@@ -25,8 +25,6 @@ function Premiers({item,filt}) {
 }
 
 const View=()=>{
-    const {loadingPremiers,error}=useSelector(state=>state.premier)
-     
     const filterPremiers=useSelector(state=>{
         const prem= state.premier;
         if(prem.activeFiltPremier[0]==='Все'&&prem.activeFiltPremier[1]==='Все'){
@@ -58,6 +56,7 @@ const View=()=>{
      setGenre('Все');
      setCountry('Все');
      dispatch(filtPremiers(['Все','Все']))
+     dispatch(fetchPremier())
 
     },[])
     const dispatch = useDispatch();

@@ -1,9 +1,10 @@
 .top-inner{ 
-    padding-top: 150px;
+    padding-top: 90px;
     background-color: #F1E8E8;
     margin: 0 auto;
     min-height: 100vh;
     padding-left: 70px;
+    padding-bottom: 20px;
 }
 .top-wrap{
     display: flex;
@@ -18,4 +19,18 @@
 .error{
     display: none;
    
+}
+@media(max-width:1118px){
+    
+    .top-filt {
+        justify-content: center;
+    }
+    .top-wrap{
+        justify-content: center;
+    }
+}
+@media(max-width:788px){
+    .top-inner {
+        padding-left: 15px;
+    }
 }

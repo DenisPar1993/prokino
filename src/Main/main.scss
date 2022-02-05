@@ -1,0 +1,135 @@
+ .film__wrapper{
+    background-color: #F1E8E8;
+    
+    opacity: 0.85;
+    
+    padding: 140px 50px 40px ;
+  }
+  .cards{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .cards__title{
+    margin-bottom: 40px;
+    font-size: 25px;
+  }
+  .card span{
+    
+    font-weight: 300;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  .card img{
+    margin-bottom: 8px;
+  
+  }
+  .swiper-button-prev, .swiper-button-next{
+    transform: translateY(-100%);
+    background-color: white;
+   color: black !important;
+    width: 60px !important;
+    height: 60px !important;
+    overflow: visible !important;
+    border-radius: 50%;
+  }
+  .swiper-button-prev{
+    left: -10px !important;
+  }
+  .swiper-button-next{
+    right: 0 !important;
+  }
+  next__slide, .prev__slide{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    z-index: 50;
+  }
+  .slide__wrap{
+    max-width: 1066px;
+    margin: 0 auto;
+  }
+  .slick-arrow {
+    background-color: #fff;
+    border:none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 0;
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+  }
+  .slick-next{
+   right: -12px;
+  
+  }
+  .slick-next:hover{
+    transform: translateX(6px);
+    transition: transform ease-out 0.5s;
+  }
+  
+  .slick-prev{
+   left: -28px;
+   
+  }
+  .slick-prev:hover{
+    transform: translateX(-6px);
+   transition: transform ease-out 0.5s;
+  }
+  
+  .slick-next::before{
+    content: url(../right_arrow.svg);
+  }
+  .slick-prev::before{
+    content: url(../left_arrow.svg);
+  }
+
+
+  @media(max-width:1133px){
+    .slide__wrap{
+        max-width: 877px;
+      }
+  }
+  @media(max-width:1018px){
+    .film__wrapper {
+        padding: 184px 50px 40px;
+    }
+  }
+  @media(max-width:950px){
+    .slide__wrap {
+        max-width: 671px;
+    }
+    .film__wrapper {
+        padding: 184px 69px 40px;
+    }
+  }
+  @media(max-width:788px){
+    .film__wrapper {
+        padding: 150px 10px 40px;
+        overflow: hidden;
+    }
+   
+    .cards__title {
+      text-align: center;
+  }
+  .film__wrapper {
+    padding: 150px 40px 40px;
+}
+.slide__wrap {
+  max-width: 575px;
+}
+.cards {
+  display: inline-block;
+}
+.slide__wrap {
+  max-width: 800px;
+}
+  }
+
+  @media(max-width:590px){
+    .film__wrapper {
+      padding: 150px 15px 40px;
+  }
+  }
+ 

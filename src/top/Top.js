@@ -64,7 +64,6 @@ const View=()=>{
         }
     }
     useEffect(()=>{
-        console.log('текущий массив',currentArr);
        if(topOffset==1||currentArr.length&&!error){
         dispatch(fetchTopOffset(topOffset))
        }
